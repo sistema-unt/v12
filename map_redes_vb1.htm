@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base target="_top">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<title>sit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="../work_geojson/docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+	<style>
+		html, body {
+			
+			height: 100%;
+			width: 100%;
+			margin: auto;
+			font-family: Arial, Helvetica, sans-serif;
+			
+		}
+		.leaflet-container {
+			height: 100%;
+			width: 100%;
+		
+			
+		
+		}
+		
+		.content {
+			max-width: 900px;
+			margin: auto;
+			background: white;
+			padding: 4px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+	
+	</style>
+
+	
+</head>
+
+<body oncontextmenu="return false" onkeydown="return false">
+
+
+
+<div id='map'></div>
+
+<script>
+
+   /*===================================================
+                      OSM  LAYER               
+===================================================*/
+
+    var map = L.map('map').setView([-27.030203392500718, -65.30531254708877], 16);   
+var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+osm.addTo(map);
+
+/*===================================================
+                      MARKER               
+===================================================*/
+
+
+var singleMarker = L.marker([-27.03190, -65.30646]);
+singleMarker.addTo(map);
+var popup = singleMarker.bindPopup('<a href="informacion/cet2.htm" target="_self">Centro de Extensión Territorial - Raul Alfonsin - Bella Vista</a>')
+popup.addTo(map);
+
+
+var singleMarker2 = L.marker([-26.737, -65.249]);
+singleMarker2.addTo(map);
+var popup = singleMarker2.bindPopup('<a href="informacion/cet1.htm" target="_self">Centro de Extensión Territorial - Villa Obrera - Tafí Viejo</a> ')
+popup.addTo(map);
+
+
+
+const myIcon2 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/ong_verde_gold.png?raw=true',
+    iconSize: [25, 30],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -10],
+
+});
+
+const myIcon3 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/caps_rojo_gold.png?raw=true',
+    iconSize: [25, 30],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -10],
+
+});
+
+
+                                    
+
+
+const myIcon4 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_club_gold.png?raw=true',
+    iconSize: [25, 30],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -10],
+
+});
+
+const myIcon5 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_gob_gold.png?raw=true',
+    iconSize: [25, 30],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -10],
+
+
+});
+
+	
+	
+const myIcon6 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_policia_gold.png?raw=true',
+    iconSize: [25, 30],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -10],
+
+});
+	
+
+	
+const myIcon7 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_iglesia_gold.png?raw=true',
+    iconSize: [25, 30],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -10],
+
+
+});
+	
+
+	
+	
+	
+const myIcon8 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_univ.png?raw=true',
+    iconSize: [25, 30],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -10],
+
+});
+	
+	
+	
+	
+const myIcon9 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_puedes.png?raw=true',
+    iconSize: [28, 28],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -10],
+
+});
+
+
+
+const myIcon10 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_escuela.png?raw=true',
+    iconSize: [25, 30],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -10],
+
+});	
+	
+	
+	
+const myIcon11 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy.png?raw=true',
+    iconSize: [55, 55],
+    iconAnchor: [27, 27],
+    popupAnchor: [-1, -1],
+
+});
+
+const myIcon12 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy2.png?raw=true',
+    iconSize: [40, 40],
+    iconAnchor: [20, 20],
+    popupAnchor: [-1, -1],
+
+});
+	
+const myIcon13 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy3.png?raw=true',
+    iconSize: [40, 40],
+    iconAnchor: [20, 20],
+    popupAnchor: [-3, -3],
+
+});
+	
+const myIcon14 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy4.png?raw=true',
+    iconSize: [40, 40],
+    iconAnchor: [20, 20],
+    popupAnchor: [-3, -3],
+
+});
+
+const myIcon15 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy5.png?raw=true',
+    iconSize: [40, 40],
+    iconAnchor: [20, 20],
+    popupAnchor: [-3, -3],
+
+});
+
+const myIcon20 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_seu.png?raw=true',
+    iconSize: [28, 28],
+    iconAnchor: [20, 20],
+    popupAnchor: [-3, -3],
+
+});
+
+
+
+const osc = L.layerGroup();
+
+
+L.marker([-26.827345387584323, -65.20363977408229], {icon: myIcon20}).bindPopup('Secretaría de Extensión Universitaria - Universidad Nacional de Tucumán - 25 de Mayo 265 - 1er piso ').addTo(map);
+
+L.marker([-26.825939486957296, -65.21973083559455], {icon: myIcon9}).bindPopup('PUEDES UNT - Programa Universitario de Extensión y Desarrollo Social - SEU -').addTo(map);
+
+	
+   /*===================================================
+                      proyectos 2019 - Universidad Abierta Bella Vista
+===================================================*/	
+
+const proy19 = L.layerGroup();
+
+
+
+L.marker([-27.028203392500718, -65.30221254708877], {icon: myIcon11}).bindPopup('<img src="imagenes/123.jpg"> <a href="imagenes/imagenes_1.htm" target="_self">Universidad Abierta Bella Vista - Club Social Bella Vista</a>').addTo(map);
+
+L.marker([-27.03190579563901, -65.30646230476067]).bindPopup('<a href="informacion/cet2.htm" target="_self">Centro de Extensión Territorial  - Raul Alfonsin - Bella Vista</a>').addTo(map);
+
+L.marker([-27.032294563832256, -65.30625175844523], {icon: myIcon5}).bindPopup('Municipalidad de Bella Vista').addTo(map);
+
+L.marker([-27.028487422870594, -65.30285995628385], {icon: myIcon4}).bindPopup('Club Sportivo Bella Vista "Estadio las Palmeras"	Club de Futbol	Juan XXIII, Bella Vista').addTo(map);
+
+L.marker([-27.032946690949647, -65.30719347118908], {icon: myIcon4}).bindPopup('Plaza San Martin	-	Av. Belgrano 130	Bella Vista').addTo(map);
+
+L.marker([-27.02517299199951, -65.30794021426712], {icon: myIcon4}).bindPopup(' <img src="imagenes/117.jpg">    Club Talleres Voley - Av. Constitución 201 - Bella Vista').addTo(map);
+
+L.marker([-27.01315165076888, -65.29529210746962], {icon: myIcon4}).bindPopup(' <img src="imagenes/118.jpg">    Bella Vista Rugby Club- Club de Rugby- Ruta 157 - Bella Vista').addTo(map);
+
+L.marker([-27.027939878469116, -65.31094550476078], {icon: myIcon4}).bindPopup('   Club Sportivo Santa Rita - Potrero	futbol- Moreno esq. Maipu	Bella Vista').addTo(map);
+
+L.marker([-27.03306675469817, -65.30809592884128], {icon: myIcon10}).bindPopup('Escuela Manuel Garcia Fernandez-Escuela Primaria-Bella Vista').addTo(map);
+
+L.marker([-27.028082406424453, -65.30809576243283], {icon: myIcon10}).bindPopup('<img src="imagenes/116.jpg">  -  Escuela Técnica N1 De Bella Vista	-	Mariano Moreno 35	Bella Vista').addTo(map);
+
+
+
+
+
+
+
+	
+   /*===================================================
+                      proyectos 2020  - PSE en la UNT          
+===================================================*/	
+	
+
+
+const proy20 = L.layerGroup();
+
+	
+
+L.marker([-26.84668319422801, -65.25427222272016], {icon: myIcon12}).bindPopup('Práctica Social Educativa en la UNT - Barrio ATE ').addTo(proy20);
+	
+L.marker([-26.870454286068867, -65.23726159127628], {icon: myIcon12}).bindPopup('Práctica Social Educativa en la UNT- CAPS Riera ').addTo(proy20);
+
+L.marker([-26.813394621867886, -65.29363437778686], {icon: myIcon12}).bindPopup('Práctica Social Educativa en la UNT- Escuela Thames - Yerba Buena').addTo(proy20);
+
+L.marker([-26.835052061078123, -65.21183613175384], {icon: myIcon8}).bindPopup('Escuela Universitaria de Enfermería - UNT').addTo(proy20);
+
+L.marker([-26.834174979956963, -65.18532984709789], {icon: myIcon8}).bindPopup('Facultad de Filosofía y Letras UNT - Av. Benjamín Aráoz 800').addTo(proy20);
+
+
+	
+
+
+
+	
+   /*===================================================
+                      proyectos 2021  Banco Rojo          
+===================================================*/	
+const proy21 = L.layerGroup();
+
+
+L.marker([-26.85186566841955, -65.71081877593313], {icon: myIcon13}).bindPopup('Instalación de Banco Rojo  - Tafí del Valle - 5/03/2021').addTo(proy21);
+
+L.marker([-26.465274927418015, -66.03677387595106], {icon: myIcon13}).bindPopup('Instalación de Banco Rojo  - Quilmes - Ciudad Sagrada 4/07/2021').addTo(proy21);
+
+L.marker([-26.825939486957296, -65.21973083559455], {icon: myIcon9}).bindPopup('PUEDES UNT - Programa Universitario de Extensión y Desarrollo Social - SEU -').addTo(proy21);
+
+
+
+/*===================================================
+                      proyectos 2022 - Adolescencia           
+===================================================*/	
+
+
+const proy22 = L.layerGroup();
+
+
+L.marker([-26.82243268260567, -65.20260122011449], {icon: myIcon14}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psc. Social y Escuelas Medias.Gymnasium - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(proy22);
+
+L.marker([-26.7793406093756, -65.32428861432975], {icon: myIcon14}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psc. Social y Escuelas Medias. EAS - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(proy22);
+
+L.marker([-26.80106629274365, -65.25270242011544], {icon: myIcon14}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psc. Social y Escuelas Medias. ESCuela de Comercio 4  - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(proy22);
+
+L.marker([-26.832345124338833, -65.18474567593401], {icon: myIcon8}).bindPopup('Facultad de Psicología UNT ').addTo(proy22);
+
+
+
+
+
+
+                              
+
+
+
+
+
+
+/*===================================================
+                     TILE LAYER               
+===================================================*/
+
+var CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+subdomains: 'abcd',
+	maxZoom: 19
+});
+CartoDB_DarkMatter.addTo(map);
+
+var Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+ attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+subdomains: 'abcd',
+minZoom: 1,
+maxZoom: 16,
+ext: 'jpg'
+});
+Stamen_Watercolor.addTo(map);
+
+
+
+
+
+
+/*===================================================
+                      LAYER CONTROL               
+===================================================*/
+
+var baseLayers = {
+    "Water Color":Stamen_Watercolor,
+    "OpenStreetMap": osm,
+};
+
+
+var overlays = {
+    "CET Tafi Viejo": singleMarker2,
+	"CET Bella Vista": singleMarker,
+	
+	
+ };
+
+L.control.layers(baseLayers, overlays).addTo(map);
+
+
+/*===================================================
+                      SEARCH BUTTON               
+===================================================*/
+
+L.Control.geocoder().addTo(map);
+
+
+
+
+
+
+	
+	
+</script>
+
+
+<script>
+
+
+
+	// Se define una variable que determina el trazado de la polilínea
+	var track = [[-27.028203392500718, -65.30221254708877],[-27.03190579563901, -65.30646230476067],[-27.028203392500718, -65.30221254708877],[-27.03306675469817, -65.30809592884128],[-27.028203392500718, -65.30221254708877],[-27.032294563832256, -65.30625175844523],[-27.028203392500718, -65.30221254708877],[-27.028082406424453, -65.30809576243283]];   
+
+	// Se crea y añade la polínea al mapa ajustando algunos estilos básicos de la misma
+	L.polyline(track,{color:'red',opacity:1}).addTo(map);
+
+</script>
+
+<script>
+
+
+
+	// Se define una variable que determina el trazado de la polilínea
+	var track1 = [[-26.813394621867886, -65.29363437778686],[-26.835052061078123, -65.21183613175384],[-26.813394621867886, -65.29363437778686],[-26.834174979956963, -65.18532984709789],[-26.813394621867886, -65.29363437778686],[-26.825939486957296, -65.21973083559455]];
+
+	// Se crea y añade la polínea al mapa ajustando algunos estilos básicos de la misma
+	L.polyline(track1,{color:'green',opacity:1}).addTo(proy20);
+
+</script>
+
+<script>
+
+
+
+	// Se define una variable que determina el trazado de la polilínea
+	var track2 = [[-26.82243268260567, -65.20260122011449],[-26.7793406093756, -65.32428861432975],[-26.80106629274365, -65.25270242011544],[-26.832345124338833, -65.18474567593401],[-26.832345124338833, -65.18474567593401],[-26.825939486957296, -65.21973083559455]];
+
+	// Se crea y añade la polínea al mapa ajustando algunos estilos básicos de la misma
+	L.polyline(track2,{color:'blue',opacity:1}).addTo(proy22);
+
+</script>
+
+
+
+<!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_3 a2a_floating_style a2a_default_style" style="bottom:430px;">
+  
+    
+  <div> <a href="index.htm"><img src="Iconos/sit.png" width="55" height="55" border="0"></a></a> 
+  </div>
+ 
+</div>
+
+
+  
+<div class="a2a_kit a2a_kit_size_50 a2a_floating_style a2a_default_style" style="bottom:40px;">
+  
+    
+   
+  <div> 
+  
+  	<a href="map.htm" target="_self"><img src="Iconos/icono_punto_mapa.png" width="43" height="43" border="0"></a> 
+    <a href="map2.htm" target="_self"><img src="Iconos/icono_punto.png" width="43" height="43" border="0"></a>
+	<a href="map_redes.htm" target="_self"><img src="Iconos/logos_redes2.png" width="43" height="43" border="0"></a> 	
+    <a href="imagenes/imagenes.htm" target="_self"><img src="Iconos/logo_imagenes.png" width="43" height="43" border="0"></a>
+	<a href="informacion/informacion.htm" target="_self"><img src="Iconos/logo_info.png" width="43" height="43" border="0"></a> 
+	 
+  </div>
+ 
+</div>
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
+<!-- AddToAny END -->
+
+
+
+
+
+</body>
+</html>

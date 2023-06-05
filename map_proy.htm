@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base target="_top">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<title>sit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="../work_geojson/docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+	<style>
+		html, body {
+			
+			height: 100%;
+			width: 100%;
+			margin: auto;
+			font-family: Arial, Helvetica, sans-serif;
+			
+		}
+		.leaflet-container {
+			height: 100%;
+			width: 100%;
+		
+			
+		
+		}
+		
+		.content {
+			max-width: 900px;
+			margin: auto;
+			background: white;
+			padding: 4px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+	
+	</style>
+
+	
+</head>
+
+<body oncontextmenu="return false" onkeydown="return false">
+
+
+
+<div id='map'></div>
+
+<script>
+
+   /*===================================================
+                      OSM  LAYER               
+===================================================*/
+
+    var map = L.map('map').setView([-26.858, -65.281], 11);   
+var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+osm.addTo(map);
+
+/*===================================================
+                      MARKER               
+===================================================*/
+
+
+var singleMarker = L.marker([-27.032013309012687, -65.30649717347765]);
+singleMarker.addTo(map);
+var popup = singleMarker.bindPopup('<a href="informacion/cet2.htm" target="_self">Centro de Extensión Territorial - Raul Alfonsin - Bella Vista</a>')
+popup.addTo(map);
+
+
+var singleMarker2 = L.marker([-26.737438515672704, -65.24974772686448]);
+singleMarker2.addTo(map);
+var popup = singleMarker2.bindPopup('<a href="informacion/cet1.htm" target="_self">Centro de Extensión Territorial - Villa Obrera - Tafí Viejo</a> ')
+popup.addTo(map);
+
+
+
+
+	
+	
+	
+const myIcon9 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy.png?raw=true',
+    iconSize: [40, 40],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -3],
+
+});
+
+const myIcon10 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy2.png?raw=true',
+    iconSize: [40, 40],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -3],
+
+});
+	
+const myIcon11 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy3.png?raw=true',
+    iconSize: [40, 40],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -3],
+
+});
+	
+const myIcon12 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy4.png?raw=true',
+    iconSize: [40, 40],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -3],
+
+});
+
+const myIcon13 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy5.png?raw=true',
+    iconSize: [40, 40],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -3],
+
+});
+
+
+	
+   /*===================================================
+                      proyectos 2019             
+===================================================*/	
+
+const proy19 = L.layerGroup();
+
+
+L.marker([-26.816197926348366, -65.2111928182627], {icon: myIcon9}).bindPopup('<a href="imagenes/imagenes_1.htm" target="_self"> Proyecto Universidad Abierta</a> - muestra académica de la UNT - Usina del Centenario - 6/09/2019 - ').addTo(proy19);
+
+L.marker([-26.923923065807937, -65.33471817011302], {icon: myIcon9}).bindPopup('Universidad Abierta - Club Almirante Brown A2').addTo(proy19);
+
+L.marker([-27.028203392500718, -65.30221254708877], {icon: myIcon9}).bindPopup('Universidad Abierta Bella Vista').addTo(proy19);
+
+L.marker([-26.86578511232654, -65.31106789573826], {icon: myIcon9}).bindPopup(' Universidad Abierta San Pablo - Villa Nougues').addTo(proy19);
+
+L.marker([-27.59654348250478, -65.61665419190703], {icon: myIcon9}).bindPopup('Universidad Abierta - Ciudad Alberdi').addTo(proy19);
+
+L.marker([-26.839674914242764, -65.23192093155531], {icon: myIcon9}).bindPopup('Instalación Banco Rojo - Facultad de Agronomía y Zootecnia -  UNT   15/03/2019').addTo(proy19);
+
+
+
+
+
+
+
+	
+   /*===================================================
+                      proyectos 2020            
+===================================================*/	
+	
+	
+
+
+const proy20 = L.layerGroup();
+
+	
+L.marker([-26.835479828841553, -65.1937864470978], {icon: myIcon10}).bindPopup('Jornada de concientización por el dia internacional de la mujer 9/03/2020- Terminal de Ómnibus SMT ').addTo(proy20);
+
+L.marker([-26.84668319422801, -65.25427222272016], {icon: myIcon10}).bindPopup('Práctica Social Educativa en la UNT - Barrio ATE ').addTo(proy20);
+	
+L.marker([-26.870454286068867, -65.23726159127628], {icon: myIcon10}).bindPopup('Práctica Social Educativa en la UNT- CAPS Riera ').addTo(proy20);
+
+L.marker([-26.813394621867886, -65.29363437778686], {icon: myIcon10}).bindPopup('Práctica Social Educativa en la UNT- Escuela Thames - Yerba Buena').addTo(proy20);
+
+
+
+
+
+	
+
+
+
+	
+   /*===================================================
+                      proyectos 2021            
+===================================================*/	
+const proy21 = L.layerGroup();
+
+
+L.marker([-26.85186566841955, -65.71081877593313], {icon: myIcon11}).bindPopup('Instalación de Banco Rojo  - Tafí del Valle - 5/03/2021').addTo(proy21);
+
+L.marker([-26.465274927418015, -66.03677387595106], {icon: myIcon11}).bindPopup('Instalación de Banco Rojo  - Quilmes - Ciudad Sagrada 4/07/2021').addTo(proy21);
+
+L.marker([-27.032166774432792, -65.30754092750722], {icon: myIcon11}).bindPopup(' <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrO649mrbY898QG5qEDr4pv465gyfHRrax6ABwUZEyA1Rbvs8hd-3dAqf9pITQ5_NCqaJSKj4sAx5v8TA1mlgmnV--SIor_ObTgB3tWWjgoppEhqmysPU5X-nO2HwvdHYxm4R1SELdA6DoNHK1DQJpBjSgjN_OPhU5r86_WJIZGmuL8mEaCbGvLTpD/s1600/2_m.png">Universidad Abierta Bella Vista - Plaza San Martin - Muestra acdémica de la UNT').addTo(proy21);
+
+L.marker([-26.826677156108214, -65.1611686040341], {icon: myIcon11}).bindPopup('<img src=" https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhveJziaBkejbt7Xq1q9QOWR1YG3NclRJJ0QDNcibVT2KU1iv1Gok1-nX8prkKLbD79LODFn-WCy1EbjXIOIz_wDHb861L6Njf8FJ92KPKbf6CYZSEv2ZbIr5IyEL6kI23pJYOPJH5YMSvGDJIGDNWarFwJ-Jo0M8R47xPNFQXIsXrfsR0S51wCXV8E/s320/1.png"> Universidad Activa y Solidaria - PUEDES - CARITAS - CAMPAÑA DE ALIMENTOS  - Destinada al comedor de Barrio Piloto -   1/07/2021').addTo(proy21);
+
+/*===================================================
+                      proyectos 2022            
+===================================================*/	
+
+
+const proy22 = L.layerGroup();
+
+
+L.marker([-26.82243268260567, -65.20260122011449], {icon: myIcon12}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psc. Social y Escuelas Medias.Gymnasium - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(proy22);
+
+L.marker([-26.7793406093756, -65.32428861432975], {icon: myIcon12}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psc. Social y Escuelas Medias. EAS - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(proy22);
+
+L.marker([-26.80106629274365, -65.25270242011544], {icon: myIcon12}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psc. Social y Escuelas Medias. ESCuela de Comercio 4  - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(proy22);
+
+L.marker([-26.826677156108214, -65.1611686040341], {icon: myIcon12}).bindPopup('Proyecto PROAS - Intervención socio comunitaria sobre la problemática alimentaria. (Salud, Agronomía y Arquitectura) con perspectiva de género').addTo(proy22);
+
+L.marker([-27.17481214185445, -65.50252193173795], {icon: myIcon12}).bindPopup(' <img src="imagenes/124.jpg"><a href="imagenes/imagenes_10.htm" target="_self">Mi club se suma </a>- Club Atletico Ñuñorco - Pinturas murales y prevnción de Violencia de Género').addTo(proy22);
+
+L.marker([-26.923779628537993, -65.33479324894573], {icon: myIcon12}).bindPopup(' <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHUUHli5G8Tgz5AMcByUQk0Qlo76OjjhDYyshs9q9fc9RVMay9IHmNg4UD4PQF34enDFtmEZnqZmP9-VOsLKkJnev9ifNehYwgZ05K-eHWsD_kPsN96hZMMZCUPSE5DYtxyspyQBTlIQxybRhJ_uFXQjZfpEy9ITiaHisLcsaJE018IWJewkE2SX3p/s1600/Lules%203_m.png"> Mi club se suma - Club Atlético Almirante Brown - Lules - Pinturas murales y prevnción de Violencia de Género').addTo(proy22);
+
+L.marker([-27.347065581584324, -65.5995717644818], {icon: myIcon12}).bindPopup(' <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRRRwXEN5h_D62UzRs59qE4gQ_t-jwmaDcbREDR1s2TOHC20IiceUtX9ypS4PV2pZPSQwQasXnYNI1UTEh6DzN1sH007sZu5clgwegliGsSo3Bg44952KTZPpRqBJMc9b8AMSfWkoBaUSLRvQ285TedWWYXlsoFAfgZKE9saegv5kaVivLMwmhS6H0/s1600/Concepci%C3%B3n%203_m.png"> Mi club se suma - Club Concepción Fútbol Club - Ciudad de Concepción - ').addTo(proy22);
+
+L.marker([-26.923779628537993, -65.33450324894573], {icon: myIcon12}).bindPopup('Universidad Abierta - Club Almirante Brown - Lules').addTo(proy22);
+
+L.marker([-27.028203392500718, -65.30111254708877], {icon: myIcon12}).bindPopup('<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6sovSYaYnmCw1Bw6fDLm5Z2TF8FDxVv0cnnEGplPZcX6JdDTi7byHRMQqLlezHlzYjcRuh7xktlLmf_GLZ3hT_Gi9yyyQayZ_v93v_c01i2HVtnAsZdvyFireb8SVfH3GTo8bxikVldy7VqdTAH328PlZMbnHtjfvo_xRS0lZtR3vGEDoviCN8TzF/s1600/1_m.png"> Universidad Abierta - Muestra acdémica de la UNT -  Club Club Sportivo Bella Vista	Bella Vista	25/08/2022').addTo(proy22);
+
+
+/*===================================================
+                      proyectos 2023            
+===================================================*/	
+
+
+const proy23 = L.layerGroup();
+
+
+L.marker([-27.017422381276162, -65.37961728543313], {icon: myIcon13}).bindPopup('<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjafSdqQfyUDVm4us-en3LZjpd60xNEs0bM7mdZkr25TI_5Fk6r_jxbCFA1-IS6StkaD6oHC1bOavjA_-7Sb6KaXRTS9qvF3NLAhNWVKCBO_zGq-8_hK3YpkUFTHWUV9gZgrtiYqoslBW7o-4O5rQZx54HkToYaz1TEeFg0otM_AZ3rX3JIgy8AafN4/s1600/inta_m.png"> Instalación de Banco Rojo - INTA Famaillá - 7/3/2023').addTo(proy23);
+
+L.marker([-26.82911917637032, -65.16128993405098], {icon: myIcon13}).bindPopup('Proyecto PROHASA - SEU UNT 2023 - Salud - Seguridad alimentaria., Medio Ambiente - Vivienda - Desarrollo Urbano, Educación, Trabajo - Economía Social -').addTo(proy23);
+
+L.marker([-26.73389906514986, -65.2546857066266], {icon: myIcon13}).bindPopup('Proyecto PRÁCTICAS SOCIALES EDUCATIVAS: MONITOREO DE INDICADORES DE SUSTENTABILIDAD AMBIENTAL PARA ACOMPAÑAR EL MODELO DE CIUDAD SOSTENIBLE DE TAFÍ VIEJO').addTo(proy23);
+
+L.marker([-26.660805850989895, -65.04811933120051], {icon: myIcon13}).bindPopup('PROYECTO TRAMHaR - SEU 2023-  Trabajo en red, Arquitectura para la mejora del hábitat rural- Medio Ambiente - Vivienda - Desarrollo Urbano, Derechos Humanos - Diversidad - Género	- Fac. Arquitectura y Urbanismo - 	El Naranjo y El Sunchal - Tucumán	Comuna de El Naranjo y el Sunchal').addTo(proy23);
+
+L.marker([-26.795114661625046, -65.1962293324177], {icon: myIcon13}).bindPopup('Proyecto Un puente a la naturaleza a través del cine - SEU 2023- Ciencias Naturales, Cine, Video y Televisión -DCI Santa María Goretti  ').addTo(proy23);
+
+L.marker([-26.389506532614114, -65.42546823720419], {icon: myIcon13}).bindPopup('  Participación adolescente: identificando problemáticas, fortaleciendo habilidades y  proyectando el futuro. 	SEU UNT 2023- Derechos Humanos - Diversidad - Género, Educación, Trabajo - Economía Social- Fac. Filosofía y Letras, Fac. de Psicología').addTo(proy23);
+
+L.marker([-26.736021277660154, -65.25054176869773], {icon: myIcon13}).bindPopup('Proyecto Intervención comunitaria en el control de las parasitosis intestinales en Villa Obrera, Tafí Viejo, Salud - Seguridad alimentaria., Educación	- Fac. de Bioquímica, Química y Farmacia, Fac. de  Medicina').addTo(proy23);
+
+L.marker([-26.811836487792696, -65.33514355324846], {icon: myIcon13}).bindPopup('Proyecto La Sonrisa de los Agustines FOUNT -SEU UNT 2023	Salud - Seguridad alimentaria., Educación-  Fac. de Educación Fisica, Escuela de Enfermería, Fac de Odontología, Fac. de Psicología	-  El Corte-(zona rio muerto)Yerba Buena - Tucumán ').addTo(proy23);
+
+L.marker([-26.73717464249608, -65.2500146756751], {icon: myIcon13}).bindPopup('Herramientas para la producción agroecologica de especies aromáticas y medicinales y su aprovechamiento en la salud humana - SEU UNT 2023	-  Instituto Nacional de Agricultura Familiar - Salud - Seguridad alimentaria. - Facultad de Agronomía, Zootecnia y Veterinaria').addTo(proy23);
+
+L.marker([-26.736556522184728, -65.25788965915979], {icon: myIcon13}).bindPopup('CIUDADANÍA, DERECHOS Y TERRITORIO: FORMACIÓN DE EDUCADORES EN DERECHOS HUMANOS CON PERSPECTIVA SOCIO TERRITORIAL - SEU 2023 - Secretaría de Planificación y Vinculación Estratégica de la Municipalidad de Tafí Viejo - Facultad de Derecho y Ciencias Sociales ').addTo(proy23);
+
+L.marker([-26.500253656195316, -64.74421023251817], {icon: myIcon13}).bindPopup('Proyecto SEMBRANDO JUNTOS POR UNA MEJOR CALIDAD DE VIDA DE LA COMUNIDAD - Convocatoria SEU 2023 - Temática:  Medio Ambiente, Vivienda, Desarrollo Urbano,Trabajo, Economía Social - Facultad de Agronomía, Zootecnia y Veterinaria - 	Ciudad de Burruyacu').addTo(proy23);
+
+L.marker([-26.730180837173176, -65.25971486854797], {icon: myIcon13}).bindPopup('Proyecto SALUD RENAL. Creando conciencia  -  Convocatoria SEU 2023 -  Facultad de Bioquímica, Química y Farmacia, Facultad de Medicina	 - Policlínica Municipal de Tafi Viejo').addTo(proy23);
+
+L.marker([-27.024701841466232, -65.30778408753147], {icon: myIcon13}).bindPopup('Proyecto Cuidando nuestro hogar cuidamos el mundo. Proyecto de Educación y Salud Ambiental - Convocatoria SEU 2023 - Facultad de Ciencias Naturales -  Temática: Salud - Seguridad alimentaria., Medio Ambiente - Vivienda - Desarrollo Urbano, Educación - ').addTo(proy23);
+
+L.marker([-26.831634697893374, -65.2049009897571], {icon: myIcon13}).bindPopup('Proyecto Contame ESI : Generación de espacios de diálogo, capacitación y difusión radial y redes sociales en torno a la Educación Sexual Integral de estudiantes de la Escuela y Liceo Vocacional Sarmiento de la U.N.T. -- Unión de EStudiantes Secundarios de Tucumán -   Temática: Salud - Seguridad alimentaria., Derechos Humanos - Diversidad - Género, Educación-    ').addTo(proy23);
+
+
+
+
+
+
+/*===================================================
+
+L.marker([-26.77938, -65.32425], {icon: miIcon9}).bindPopup('	 Tratamiento integral de la problematica adolescentes en la esc. media').addTo(proy2);
+L.marker([-26.801066, -65.252], {icon: miIcon9}).bindPopup('	 Tratamiento integral de la problematica adolescentes en la esc. media').addTo(proy2);
+
+
+
+
+
+
+
+/*===================================================
+                     TILE LAYER               
+===================================================*/
+
+var CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+subdomains: 'abcd',
+	maxZoom: 19
+});
+CartoDB_DarkMatter.addTo(map);
+
+var Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+ attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+subdomains: 'abcd',
+minZoom: 1,
+maxZoom: 16,
+ext: 'jpg'
+});
+Stamen_Watercolor.addTo(map);
+
+
+
+
+
+
+/*===================================================
+                      LAYER CONTROL               
+===================================================*/
+
+var baseLayers = {
+    "Water Color":Stamen_Watercolor,
+    "OpenStreetMap": osm,
+};
+
+
+var overlays = {
+    "CET Tafi Viejo": singleMarker2,
+	"CET Bella Vista": singleMarker,
+	"PROY 2019": proy19,
+	"PROY 2020": proy20,
+	"PROY 2021": proy21,
+	"PROY 2022": proy22,
+	"PROY 2023": proy23
+ };
+
+L.control.layers(baseLayers, overlays).addTo(map);
+
+
+/*===================================================
+                      SEARCH BUTTON               
+===================================================*/
+
+L.Control.geocoder().addTo(map);
+
+
+
+
+
+
+	
+	
+</script>
+
+
+<!-- AddToAny BEGIN -->
+
+<div class="a2a_kit a2a_kit_size_3 a2a_floating_style a2a_default_style" style="bottom:430px;">
+  
+    
+  <div> <a href="index.htm"><img src="Iconos/sit.png" width="55" height="55" border="0"></a></a> 
+  </div>
+ 
+</div>
+
+
+  
+<div class="a2a_kit a2a_kit_size_50 a2a_floating_style a2a_default_style" style="bottom:40px;">
+  
+    
+   
+  <div> 
+  
+  	<a href="map.htm" target="_self"><img src="Iconos/icono_punto_mapa.png" width="43" height="43" border="0"></a> 
+    <a href="map_proy.htm" target="_self"><img src="Iconos/icono_punto.png" width="43" height="43" border="0"></a>
+	<a href="map_redes.htm" target="_self"><img src="Iconos/logos_redes2.png" width="43" height="43" border="0"></a> 	
+    <a href="imagenes/imagenes.htm" target="_self"><img src="Iconos/logo_imagenes.png" width="43" height="43" border="0"></a>
+	<a href="informacion/informacion.htm" target="_self"><img src="Iconos/logo_info.png" width="43" height="43" border="0"></a> 
+	 
+  </div>
+ 
+</div>
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
+<!-- AddToAny END -->
+
+
+
+
+
+</body>
+</html>
