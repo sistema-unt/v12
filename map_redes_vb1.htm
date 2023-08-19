@@ -65,22 +65,24 @@ osm.addTo(map);
                       MARKER               
 ===================================================*/
 
-
-var singleMarker = L.marker([-27.03190, -65.30646]);
+var singleMarker = L.marker([-27.032013309012687, -65.30649717347765]);
 singleMarker.addTo(map);
-var popup = singleMarker.bindPopup('<a href="informacion/cet2.htm" target="_self">Centro de Extensión Territorial - Raul Alfonsin - Bella Vista</a>')
+var popup = singleMarker.bindPopup('<a href="informacion/cet2.htm" target="_self"> <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnFAUomzdTUzkM-OhhirJ0EvMmPRWNxdjmy-RA4_jjxgeUuBPsav9ZbitJIGLiGIF0jIruGIxdfHPUDYBNAyO6NLhtfX2VucfuAeS3NRoSnIQRi0e3xmbKWBevMPCGJUeDTNa89tu9J7PMLCcjpwo0n3k8csEuztYVlMhCJb45whVkBW0PldpGPnMAsW4/s598/Centro%20Alfonsin%20Bella%20Vista.png" style="width:100%"> Centro de Extensión Territorial - Raul Alfonsin - Bella Vista</a>')
 popup.addTo(map);
 
 
-var singleMarker2 = L.marker([-26.737, -65.249]);
+
+var singleMarker2 = L.marker([-26.737438515672704, -65.24974772686448]);
 singleMarker2.addTo(map);
-var popup = singleMarker2.bindPopup('<a href="informacion/cet1.htm" target="_self">Centro de Extensión Territorial - Villa Obrera - Tafí Viejo</a> ')
+var popup = singleMarker2.bindPopup('<a href="informacion/cet1.htm" target="_self"> <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxCyMfxfJ3kXEoNboBQTuQ3t95VIgJ6RcysSCRG_rPnZhFrg5enTkf6Q0zGiJ5SWwO1vgU8-ybwx9m5smDC5tmLTFy9QiXEKssiKXSq5SS35IOduKCNnADjh8eh7cW6RB8an4j9zp2xvndVz9XgaIuBvlZDRh_76Edr1NEh6QIO8fFSSovcozNtIVsa64/s250/1_min.png" style="width:100%"> Centro de Extensión Territorial - Villa Obrera - Tafí Viejo</a> ')
 popup.addTo(map);
+
+
 
 
 var singleMarker3 = L.marker([-26.846956845055743, -65.25624407440955]);
 singleMarker3.addTo(map);
-var popup = singleMarker3.bindPopup('<a href="informacion/cet3.htm" target="_self">Centro de Extensión Territorial - Mate Cocido - Barrio ATE</a> ')
+var popup = singleMarker3.bindPopup('<a href="informacion/cet3.htm" target="_self"> <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiIeQV5ivGuxx0mrhHSBkGAeLbkwBiC2WUvq03XKAgyZ43OTLpA49tM27zjjyBy4M-bhFF9wiUUznrtUUjNPbYzRj44UiiieIiyFK1XVcCWD9KSd_2P5B3hqR1XyYmt0UW_aFawpBF7819Z2BmfC68g1CryOSUTAsaEkZPPTF47LfYv04MDhzMFqv05UI/s300/mate_cocido_1mini.png" style="width:100%"> Centro de Extensión Territorial - Mate Cocido - Barrio ATE</a> ')
 popup.addTo(map);
 
 
@@ -380,8 +382,9 @@ var baseLayers = {
 var overlays = {
     "CET Tafi Viejo": singleMarker2,
 	"CET Bella Vista": singleMarker,
+	"CET Mate Cocido": singleMarker3
 	
-	
+		
  };
 
 L.control.layers(baseLayers, overlays).addTo(map);
@@ -457,14 +460,11 @@ L.Control.geocoder().addTo(map);
   
     
    
-  <div> 
-  
-  	<a href="map.htm" target="_self"><img src="Iconos/icono_punto_mapa.png" width="43" height="43" border="0"></a> 
-    <a href="map2.htm" target="_self"><img src="Iconos/icono_punto.png" width="43" height="43" border="0"></a>
-	<a href="map_redes.htm" target="_self"><img src="Iconos/logos_redes2.png" width="43" height="43" border="0"></a> 	
-    <a href="imagenes/imagenes.htm" target="_self"><img src="Iconos/logo_imagenes.png" width="43" height="43" border="0"></a>
-	<a href="informacion/informacion.htm" target="_self"><img src="Iconos/logo_info.png" width="43" height="43" border="0"></a> 
-	 
+  <div> <a href="map.htm" target="_self"><img src="Iconos/icono_punto_mapa.png" width="43" height="43" border="0"></a> 
+    <a href="map2.htm" target="_self"><img src="Iconos/icono_punto.png" width="43" height="43" border="0"></a> 
+    <a href="imagenes/imagenes.htm" target="_self"><img src="Iconos/logo_imagenes.png" width="43" height="43" border="0"></a> 
+    <a href="informacion/informacion.htm" target="_self"><img src="Iconos/logo_info.png" width="43" height="43" border="0"></a> 
+    <a href="imagenes/imagenes_1.htm" target="_self"><img src="Iconos/logos_volver.png" width="43" height="43" border="0"></a> 
   </div>
  
 </div>
