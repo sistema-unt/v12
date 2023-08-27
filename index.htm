@@ -1,175 +1,122 @@
-﻿<html xml:lang="es" dir="ltr"> 
-
+<!DOCTYPE html>
+<html>
 <head>
-<title>sit</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" media="screen" type="text/css" href="../normal.css" />
-
 <style>
-
-
-div {
-  margin: 3px;
-  padding: 3px;
+* {
+  box-sizing: border-box;
 }
 
-h1 {
-   color: #4CAF60;
-}
-
-p {
-  text-align: justify;
-  letter-spacing: 1.5px;
-  font-size: 15px;
-}
-
-p1 {
-  text-align: justify;
-  letter-spacing: 1.5px;
-  font-size: 17px;
-  color: #16A085;
-}
-
-
-
-a {
-  text-decoration: none;
-  color: #0000aa;
-}
-
-
-
-
-/* Style the body */
+/* Add a gray background color with some padding */
 body {
-	margin: 1px;
-	background-image: url("111.png");
-    
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
 }
 
-/* Header/logo Title */
+/* Header/Blog Title */
 .header {
-	padding: 1px;
-	max-width: 900px;
-	margin: auto;
+  padding: 4px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
 }
 
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 16px;
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
 }
 
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
 
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
 
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 10px;
+   margin-top: 10px;
+}
 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /* Footer */
 .footer {
   padding: 20px;
   text-align: center;
   background: #ddd;
+  margin-top: 20px;
 }
 
-
-
-
-
-hr.rounded {
-  border-top: 4px solid #a99;
-  border-radius: 4px;
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
 }
-
-
-.content {
-	max-width: 910px;
-	margin: 0px;
-	background: white;
-	padding: 1px;
-	font-size: 14px;
-	font-family: Arial;
-}
-
-
-img {
-  border-radius: 16px;
-}
-
-
 </style>
-
-<!-- megusta  -->
-<script language="JavaScript" type="text/JavaScript">
-<!--
-
-
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
-//-->
-</script>
-<!-- megusta  -->
-<script language="JavaScript" type="text/JavaScript">
-<!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
-
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
-}
-
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
-//-->
-</script>
-
 </head>
+<body>
 
-
-
-<body oncontextmenu="return false" onkeydown="return false">
-
-<section class="header"> 
-
-
-
-<section class="content">
-
- 
-<div> 
-
-
-
- <a href="map.htm"> <img src="Iconos/portada1.gif" border="0" class="mySlides" style="width:100%"></a>
-
+<div class="header">
   
-  
-
-
 </div>
 
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+    
+      <div class="fakeimg"> <img src="placa.png" width="900" > 
+      </div>
+       </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:100px;">imag</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
 
-
-
-  
-
+<div class="footer">
+  <h2>Footer</h2>
+</div>
 
 </body>
 </html>
