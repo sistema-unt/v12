@@ -17,7 +17,7 @@ body {
 /* Header/Blog Title */
 .header {
   padding: 4px;
-  font-size: 40px;
+  font-size: 15px;
   text-align: center;
   background: white;
 }
@@ -38,16 +38,17 @@ body {
 
 /* Fake image */
 .fakeimg {
-  background-color: #aaa;
+  background-color: #cbb;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Add a card effect for articles */
 .card {
-   background-color: white;
-   padding: 10px;
-   margin-top: 10px;
+	background-color: white;
+	padding: 5px;
+	margin-top: 5px;
+	font-size: 15px;
 }
 
 /* Clear floats after the columns */
@@ -61,9 +62,11 @@ body {
 .footer {
   padding: 20px;
   text-align: center;
-  background: #ddd;
+  background: #dcc;
   margin-top: 20px;
 }
+
+
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 500px) {
@@ -97,13 +100,16 @@ body {
   </div>
   <div class="rightcolumn">
     <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <p>A cerca del SIT</p>
+      <div class="fakeimg" ><img src="mapa.png" width="100%" ></div>
+      <p>En el mapa de inicio, se puede ver la ubicación de los Centros de Extensión Territorial y de puede seleccionar las diferentes organizaciones, utilizando el filtro de la esquina superior dereccha</p>
     </div>
     <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg">Image</div><br>
+      <p>Detalles del menú</p>
+      <div class="fakeimg"><img src="menu.png" width="100%" ></div>
+	  
+	<p>El menú flotante contiene los iconos de mapas organizaciones y mapa de proyectos. El tercer comando me permite ver la galeria imágenes de proyectos. El último comando me permite el ingreso de datos al sistema</p>
+    
       <div class="fakeimg">Image</div><br>
       <div class="fakeimg">Image</div>
     </div>
@@ -115,7 +121,8 @@ body {
 </div>
 
 <div class="footer">
-  <h2>Footer</h2>
+  <p>Universidad Nacional de Tucumán - 
+  Secretaría de Extensión Universitaria</p2>
 </div>
 
 </body>
