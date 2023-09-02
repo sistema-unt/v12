@@ -1,95 +1,82 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-
+<title>portada</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {
-  box-sizing: border-box;
-}
 
-/* Add a gray background color with some padding */
+
 body {
-  font-family: Arial;
-  padding: 0px;
-  background: #46BBBB;
+	margin: 0px;
+	background-color: #46BBBB;
 }
 
-/* Header/Blog Title */
 .header {
-  padding: 3px;
-  font-size: 15px;
-  text-align: center;
-  background: #46BBBB;
-}
-
-
-/* Fake image */
-.fakeimg {
-  background-color: #46BBBB;
-  width: 100%;
-  padding: 2px;
-}
-
-
-.fakeimg2 {
-  background-color: #46BBBB;
-  width: 100%;
-  padding: 0px;
-}
-
-
-
-
-/* Add a card effect for articles */
-.card {
-	background-color: #46BBBB;
-	padding: 3px;
-	margin-top: 5px;
-	font-size: 15px;
-}
-
-.card2 {
-	background-color: #46BBBB;
-	padding: 0px;
-	margin-top: 0px;
+	padding: 1px;
+	max-width: 900px;
+	margin: auto;
 	
 }
 
+
+.imageContainer {
+  width: 100%;
+  overflow: hidden;
+  position: center;
+}
+.imageHolder {
+  height: 100%;
+  display:flex;
+  align-items: center;
+}
+.imageItself {
+  height: auto;
+  width: 100%;
+  align-self: center;
+
+}
+
+
+.bottom-left1 {
+  position: absolute;
+  bottom: 50px;
+  left: 310px;
+}
+
+.bottom-left2 {
+  position: absolute;
+  bottom: 50px;
+  left: 380px;
+}
+
 </style>
+
 </head>
+
+
+
+
 
 <body oncontextmenu="return false" onkeydown="return false">
 
+<section class="header">
 
+<div class="imageContainer">
 
-    <div class="card2">
-    
-      <div class="fakeimg2"> <img src="placa_.png" width="100%" > 
-      </div>
-       </div>
-   
-<!-- AddToAny BEGIN -->
-<div class="a2a_kit a2a_kit_size_50 a2a_floating_style a2a_default_style" style="bottom:40px;">
-
-   
-  <div> <a href="ayuda_i.htm" target="_self"><img src="icono_ayuda.png" width="43" height="43" border="0"></a> 
-    <a href="index1.htm" target="_self"><img src="icono_entrar.png" width="43" height="43" border="0"></a> 
-    
-  </div>
+  <div class="imageHolder"> <img src="data/placa_.png" width="100%"  class="imageItself" /> 
   
+    <div class="bottom-left1"><a href="ayuda_i.htm" target="_self"><img src="data/icono_ayuda.png" width="70" height="70" border="0"></a></div>
+    <div class="bottom-left2"><a href="map.htm" target="_self"><img src="data/icono_entrar.png" width="70" height="70" border="0"></a></div>
   
-   
+  </div> 
  
   
   
-</div>
-<script async src="https://static.addtoany.com/menu/page.js"></script>
-<!-- AddToAny END -->
+</div>  
+
+
+
+
 
 </body>
 </html>
