@@ -12,8 +12,8 @@ body {
 }
 
 .header {
-	padding: 1px;
-	max-width: 900px;
+	padding: 0px;
+	max-width: 800px;
 	margin: auto;
 	
 }
@@ -37,17 +37,6 @@ body {
 }
 
 
-.bottom-left1 {
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
-}
-
-.bottom-left2 {
-  position: absolute;
-  bottom: 50px;
-  left: 150px;
-}
 
 </style>
 
@@ -63,10 +52,14 @@ body {
 
 <div class="imageContainer">
 
-  <div class="imageHolder"> <a href="ayuda_i.htm"><img src="data/placa_.png" width="100%" border="0"  class="imageItself" /></a> 
+  <div class="imageHolder">
+  <img src="data/placa_.png" width="100%" border="0"class="imageItself" alt="Workplace" usemap="#workmap" width="2223" height="1200"> 
   </div> 
  
-  
+ <map name="workmap">
+  <area shape="circle" coords="78,920,50" alt="Cup of coffee" href="map.htm">
+  <area shape="circle" coords="180,920,50" alt="Cup of coffee" href="ayuda_i.htm">
+</map> 
   
 </div>  
 
