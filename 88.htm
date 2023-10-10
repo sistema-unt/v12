@@ -1,63 +1,484 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
 <head>
-<title>portada</title>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+* {
+  box-sizing: border-box;
+}
 
 
+.icon-bar {
+  position: fixed;
+  top: 87%;
+}
+
+.icon-bar a {
+  transition: all 0.5s ease;
+}
+
+.icon-bar a:hover {
+  background-color: #46BBBB;
+}
+
+
+
+/* Add a gray background color with some padding */
 body {
-	margin: 0px;
-	background-color: #46BBBB;
+  font-family: Arial;
+  padding: 3px;
+  background: #46BBBB;
 }
 
+/* Header/Blog Title */
 .header {
-	padding: 0px;
-	max-width: 900px;
-	margin: auto;
-	
+  padding: 0px;
+  font-size: 15px;
+  text-align: center;
+  background: #46BBBB;
 }
 
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 65%;
+}
 
-.imageContainer {
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 35%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #46BBBB;
   width: 100%;
-  overflow: hidden;
-  position: center;
+  padding: 2px;
 }
-.imageHolder {
-  height: 100%;
-  display:flex;
-  align-items: center;
-}
-.imageItself {
-  height: auto;
-  width: 100%;
-  align-self: center;
 
+
+.fakeimg2 {
+  background-color: #FFFFFF;
+  width: 100%;
+  padding: 3px;
+  align: center;
+}
+
+
+
+
+/* Add a card effect for articles */
+.card {
+	background-color: white;
+	padding: 2px;
+	margin-top: 1px;
+	font-size: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 80px;
+  text-align: left;
+  background: #46BBBB;
+  margin-top: 20px;
+}
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 20%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }
 
 
 
 </style>
 
+
 </head>
-
-
-
-
 
 <body oncontextmenu="return false" onkeydown="return false">
 
-<section class="header">
 
-<div class="imageContainer">
-
-  <div class="imageHolder"> <a href="map.htm"><img src="Iconos/portada888.gif" width="100%" border="0"class="imageItself" ></a> 
-  </div> 
- 
- 
+<div class="header">
   
-</div>  
+</div>
+
+
+<div class="row">
+
+  <div class="leftcolumn">
+  
+  
+  
+      <div class="card">
+	  
+	  
+			<div class="fakeimg"> 
+ 	 
+		   
+			
+        <p> <a href="../mapas/map.htm"> <img src="cabezal_imag.png"  border="0" class="mySlides" style="width:100%"></a></p>
+  
+  			</div>
+			
+			
+			
+			
+		
+	  <div class="card">
+	  
+	  
+	  
+      <p><a href="entrada_10.htm" ><img src="https://scontent.ftuc1-2.fna.fbcdn.net/v/t39.30808-6/384503988_291321487018027_8154818644794193020_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=49d041&_nc_ohc=2Al4nRSxrT0AX-ENLw-&_nc_ht=scontent.ftuc1-2.fna&oh=00_AfBKOez8X61uolqoXhH5CfFox3I_Ay1Fn1zAZqABUP_l3Q&oe=6521F6CC" class="mySlides"  style="width:100%"></a></p>
+
+<p1><object width="100%" data="10.html"></object></p1>
+
+        <p><a href="entrada_10.htm" >Ver más...</a></p>
+
+
+
+<hr class="rounded">
+
+
+
+
+	  
+	  
+
+        <p><a href="entrada_9.htm" ><img src="../fotos/proy/cinesalud/1.png" class="mySlides"  style="width:100%"></a></p>
+
+<p1><object width="100%" data="9.html"></object></p1>
+
+        <p><a href="entrada_9.htm" >Ver más...</a></p>
+
+
+
+<hr class="rounded">
+
+
+        <p><a href="entrada_1.htm" ><img src="../fotos/proy/univabierta/bellavista/1.png" class="mySlides"  style="width:100%"></a></p>
+
+<p1><object width="100%" data="1.html"></object></p1>
+	
+        <p><a href="entrada_1.htm" >Ver más...</a></p>
+
+
+
+<hr class="rounded">
+
+
+
+<p><a href="entrada_2.htm" ><img src="../fotos/proy/sol/1.jpg" class="mySlides"  style="width:100%"></a></p>
+
+<p1> <object width="100%"  data="2.html"></object> </p1>
+	
+<p><a href="entrada_2.htm" >Ver más...</a></p>
+
+
+<hr class="rounded">
+
+
+<p><a href="entrada_3.htm" ><img src="../fotos/proy/adoles/3.jpg" class="mySlides"  style="width:100%"></a></p>
+
+<p1> <object width="100%"  data="3.html"> </object></p1>
+	
+<p><a href="entrada_3.htm"> Ver más...</a></p>
+
+
+
+<hr class="rounded">
+
+
+
+<p><a href="entrada_4.htm" ><img src="../fotos/proy/crearte/1.png" class="mySlides"  style="width:100%"></a></p>
+
+<p1>< <object width="100%"  data="4.html"></object></p1>
+	
+<p><a href="entrada_4.htm" >Ver más...</a></p>
+
+
+
+
+<hr class="rounded">
+
+
+<p><a href="entrada_5.htm" ><img src="../fotos/proy/pse/2.png" class="mySlides"  style="width:100%"></a></p>
+
+<p1><object width="100%"  data="5.html"></object> </p1>
+	
+<p><a href="entrada_5.htm" >Ver más...</a></p>
+
+
+
+<hr class="rounded">
+
+
+
+
+<p><a href="entrada_6.htm" ><img src="../fotos/proy/miclub/m1.png" class="mySlides"  style="width:100%"></a></p>
+
+<p1><object width="100%"  data="6.html"></object> </p1>
+	
+<p><a href="entrada_6.htm" target="_self">Ver más...</a></p>
+
+
+
+
+<hr class="rounded">
+
+
+<p><a href="entrada_7.htm" ><img src="../fotos/proy/univactiva/4.png" class="mySlides"  style="width:100%"></a></p>
+
+<p1> <object width="100%"  data="7.html"></object> </p1>
+	
+<p><a href="entrada_7.htm" >Ver más...</a></p>
+
+
+
+<hr class="rounded">
+
+
+<p><a href="entrada_8.htm" ><img src="../fotos/proy/piloto/1.png" class="mySlides"  style="width:100%"></a></p>
+
+<p1> <object width="100%"  data="8.html"></object> </p1>
+
+<p><a href="entrada_8.htm" >Ver más...</a></p>
+
+
+
+
+
+<hr class="rounded">
+
+
+<p><a href="entrada_9.htm" ><img src="  " class="mySlides"  style="width:100%"></a></p>
+
+<p1><object width="100%"  data="10.html"></object> </p1>
+	
+<p><a href="entrada_9.htm">Ver más...</a></p>
+
+
+
+<hr class="rounded">
+
+
+
+     
+	 
+</div> 
+
+</div> 
+    
+	  
+
+</div> 
+
+
+
+
+
+
+
+
+  
+<div class="rightcolumn">
+
+
+	
+    <div class="card">
+	<div class="fakeimg2">
+	
+	
+        <p><strong><em>Contanos tu Experiencia</em></strong></p>
+	
+	
+    </div>
+	</div>
+
+
+
+  
+  
+  
+<div class="card">
+<p><a name="contalo"></a></p>
+
+      <p><img src="contalo_.png" width="100%" > 
+      <div class="fakeimg">
+
+<p>Participa en C@ntalo Vos </p>
+      <p>mandá/subí tus fotos comentadas al e-mail: </p>
+<p><strong>sit.seu.unt.2020@blogger.com </strong></p>
+      <p>o etiqueta tus fotos de Instagram<font color="#000099"> <a href="https://www.instagram.com/explore/tags/untsit/">#untsit</a></font></p>
+      <p><strong>En esta instancia participativa, muy importante para todos nosotros, 
+        se pretende captar instantes de la participación de los estudiantes y 
+        de otros actores del proyecto en territorio. El reflejo de lo que pasa 
+        y lo que nos pasa en esos momentos. </strong></p>
+<p>En el texto incluye el lugar y el nombre del proyecto.</p>
+<p> Puedes además incluir el nombre del autor de la fotografía. </p>
+<p>&nbsp;</p>
+      <p><font color="#006600">Gracias por participar!!</font></p>
+		
+</div>
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</div>
+</div>
+
+
+  
+ 
+
+
+<div class="footer">
+
+
+  <p><a name="contacto"></a><strong><font color="#000033">Contactos </font></strong></p>
+  <p>&nbsp;</p>
+
+<p><strong> Secretar&iacute;a 
+  de Extensi&oacute;n Universitaria</strong></p>
+<p> Universidad Nacional 
+  de Tucum&aacute;n</p>
+  
+<p>25 de Mayo 265 1er 
+  piso - Tel: 381 4223349</p>
+<p>San Miguel de Tucum&aacute;n</p>
+
+
+<p><a href="http://www.secretariaextension.unt.edu.ar">www.secretariaextension.unt.edu.ar</a></p>
+
+<p>&nbsp;</p>
+<p><a href="https://www.facebook.com/secretariadeextensionunt/"><img src="../Iconos/icono_face.png" width="40" height="40" border="0"> 
+  </a><a href="https://www.instagram.com/extension.unt/?hl=es"><img src="../Iconos/icono_insta.png" width="40" height="40" border="0"></a><a href="https://mail.google.com/mail"><img src="../Iconos/icono_email.png" width="40" height="40" border="0"></a> 
+</p>
+  
+
+
+
+
+
+<div align="left"><p1>Esta aplicación es un desarrollo del Programa Universitario 
+  de Extensión y Desarrollo Social - SEU - UNT</p1> </div>
+
+
+
+<!-- Contador de visitas -->
+<div align="right">
+  <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="http://www.websmultimedia.com/contador-de-visitas.php?id=299892"></a> 
+  <em><font size="-2" face="Geneva, Arial, Helvetica, sans-serif">visitas</a><br>
+  </font></em> </div>
+</a>
+</div>
+<!-- Fin Contador de visitas -->
+  
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="icon-bar"> <a href="../mapas/map.htm" target="_self"><img src="../Iconos/icono_punto_mapa.png" width="43" height="43" border="0"></a></a> 
+  <a href="entradas.htm" target="_self"><img src="../Iconos/logo_imagenes_c.png" width="43" height="43" border="0"></a></a> 
+  <a href="../informacion/informacion.htm" target="_self"><img src="../Iconos/logo_info.png" width="43" height="43" border="0"></a></a> 
+  <a href="../ayuda/ayuda_i.htm" target="_self"><img src="../Iconos/icono_ayuda.png" width="43" height="43" border="0"></a></a> 
+  <a href="javascript:history.back()" target="_self"><img src="../Iconos/logos_volver.png" width="43" height="43" border="0"></a></a> 
+</div>
+
+
+
+
 
 
 
@@ -65,3 +486,4 @@ body {
 
 </body>
 </html>
+
